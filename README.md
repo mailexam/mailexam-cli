@@ -84,7 +84,8 @@ integration_test:
 ## Documentation
 
 - [REST API](https://mailexam.ru/api)
-- [Knowledge base](https://wiki.mailexam.ru/)
+- [CLI guide (wiki)](https://wiki.mailexam.ru/en/cli/)
+- [Knowledge base](https://wiki.mailexam.ru/en/)
 
 ## License
 
