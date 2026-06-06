@@ -4,7 +4,7 @@ import "testing"
 
 func TestEmailFilterMatch(t *testing.T) {
 	email := EmailShort{
-		Subject: "Проверка CI",
+		Subject: "CI check",
 		To:      "user@example.com",
 		From:    "noreply@example.com",
 	}
@@ -16,17 +16,17 @@ func TestEmailFilterMatch(t *testing.T) {
 	}{
 		{
 			name:   "subject substring",
-			filter: EmailFilter{Subject: "Проверка"},
+			filter: EmailFilter{Subject: "CI"},
 			want:   true,
 		},
 		{
-			name:   "subject exact miss",
-			filter: EmailFilter{Subject: "Проверка CI", SubjectExact: true},
+			name:   "subject exact match",
+			filter: EmailFilter{Subject: "CI check", SubjectExact: true},
 			want:   true,
 		},
 		{
 			name:   "subject exact fail",
-			filter: EmailFilter{Subject: "Проверка", SubjectExact: true},
+			filter: EmailFilter{Subject: "CI", SubjectExact: true},
 			want:   false,
 		},
 		{

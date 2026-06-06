@@ -27,10 +27,11 @@ go build -o mailexam ./cmd/mailexam
 
 All values can be overridden with flags: `--token`, `--base`, `--project`, `--inbox`.
 
-International endpoints:
+Regional endpoints:
 
-- `https://mailexam.io/api/v1`
+- `https://mailexam.ru/api/v1` (default)
 - `https://mailexam.cn/api/v1`
+- `https://mailexam.io/api/v1`
 
 ## Usage
 
@@ -49,8 +50,8 @@ mailexam inbox get deab7974-a252-4412-9169-b965116b63cf
 # Emails
 mailexam email list
 mailexam email get e2f9a506-d766-4935-be11-c413384de020 --format text
-mailexam email wait --subject "Проверка CI" --timeout 30
-mailexam email assert --subject "Проверка CI" --contains "Привет"
+mailexam email wait --subject "CI check" --timeout 30
+mailexam email assert --subject "CI check" --contains "Hello"
 mailexam email delete e2f9a506-d766-4935-be11-c413384de020
 
 # Attachments
@@ -67,8 +68,8 @@ integration_test:
     MAILEXAM_PROJECT_UUID: "536a47df-5aad-44d0-8163-a39bb55abe0b"
   script:
     - npm run send-test-email
-    - mailexam email assert --subject "Проверка CI" --contains "Привет"
-  # MAILEXAM_API_TOKEN — CI/CD secret
+    - mailexam email assert --subject "CI check" --contains "Hello"
+  # MAILEXAM_API_TOKEN - CI/CD secret
 ```
 
 ## Exit codes
