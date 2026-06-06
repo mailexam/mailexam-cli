@@ -1,6 +1,6 @@
 # mailexam-cli
 
-Command-line tool for [Mailexam](https://mailexam.ru/) REST API — projects, inboxes, emails, and CI/CD assertions.
+Command-line tool for [Mailexam](https://mailexam.io/) REST API — projects, inboxes, emails, and CI/CD assertions.
 
 ## Install
 
@@ -20,8 +20,8 @@ go build -o mailexam ./cmd/mailexam
 
 | Variable | Description |
 |----------|-------------|
-| `MAILEXAM_API_TOKEN` | API token from [dashboard](https://mailexam.ru/login) |
-| `MAILEXAM_API_BASE` | API base URL (default: `https://mailexam.ru/api/v1`) |
+| `MAILEXAM_API_TOKEN` | API token from [dashboard](https://mailexam.io/login) |
+| `MAILEXAM_API_BASE` | API base URL (default: `https://mailexam.io/api/v1`) |
 | `MAILEXAM_PROJECT_UUID` | Default project UUID |
 | `MAILEXAM_INBOX_UUID` | Default inbox UUID |
 
@@ -29,7 +29,7 @@ All values can be overridden with flags: `--token`, `--base`, `--project`, `--in
 
 Regional endpoints:
 
-- `https://mailexam.ru/api/v1` (default)
+- `https://mailexam.io/api/v1` (default)
 - `https://mailexam.cn/api/v1`
 - `https://mailexam.io/api/v1`
 
@@ -64,7 +64,7 @@ mailexam email attachment download EMAIL_UUID --cid ATTACHMENT_CID -o file.pdf
 integration_test:
   stage: test
   variables:
-    MAILEXAM_API_BASE: "https://mailexam.ru/api/v1"
+    MAILEXAM_API_BASE: "https://mailexam.io/api/v1"
     MAILEXAM_PROJECT_UUID: "536a47df-5aad-44d0-8163-a39bb55abe0b"
   script:
     - npm run send-test-email
@@ -83,7 +83,7 @@ integration_test:
 
 ## Documentation
 
-- [REST API](https://mailexam.ru/api)
+- [REST API](https://mailexam.io/api)
 - [CLI guide (wiki)](https://wiki.mailexam.ru/en/cli/)
 - [Knowledge base](https://wiki.mailexam.ru/en/)
 

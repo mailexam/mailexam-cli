@@ -11,7 +11,7 @@ const (
 	EnvProjectUUID = "MAILEXAM_PROJECT_UUID"
 	EnvInboxUUID   = "MAILEXAM_INBOX_UUID"
 
-	DefaultBase = "https://mailexam.ru/api/v1"
+	DefaultBase = "https://mailexam.io/api/v1"
 )
 
 type Config struct {
