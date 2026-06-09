@@ -31,7 +31,7 @@ Regional endpoints:
 
 - `https://mailexam.io/api/v1` (default)
 - `https://mailexam.cn/api/v1`
-- `https://mailexam.io/api/v1`
+- `https://mailexam.ru/api/v1`
 
 ## Usage
 
